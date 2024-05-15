@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Hello there
+title: windhorst.dev
 
 author:
   name: Leon Windhorst
@@ -30,6 +30,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: "windhorst.dev"
 url: "https://windhorst.dev" # the base hostname & protocol for your site, e.g. http://example.com
+
+header_pages:
+  - index.md
+  - blog.md
+  - about.md
 
 # Build settings
 remote_theme: jekyll/minima
