@@ -6,13 +6,4 @@ date:   2024-05-15
 
 TODO
 
-```c
-#include <stdio.h>
-
-int
-main(void)
-{
-    printf("Hello World!\n");
-    return 0;
-}
-```
+https://github.com/lwndhrst/cboids/assets/22763666/07c8f99b-0e11-4702-8c24-8491558c1c0a
