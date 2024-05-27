@@ -2,7 +2,6 @@
 layout:     post
 title:      "3D Boids with C and Raylib"
 date:       2024-05-27
-categories: boids raylib c-programming
 ---
 
 <div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
@@ -10,3 +9,5 @@ categories: boids raylib c-programming
     src="https://www.youtube.com/embed/tiQMZTRqvHI">
   </iframe>
 </div>
+
+## TODO
