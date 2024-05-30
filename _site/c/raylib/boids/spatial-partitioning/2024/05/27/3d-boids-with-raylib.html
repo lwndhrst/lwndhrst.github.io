@@ -8,17 +8,17 @@
 <meta property="og:title" content="3D Boids with C and Raylib" />
 <meta name="author" content="Leon Windhorst" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Graphics, Games and other fun stuff :3c" />
-<meta property="og:description" content="Graphics, Games and other fun stuff :3c" />
-<link rel="canonical" href="http://localhost:4000/2024/05/27/3d-boids-with-raylib.html" />
-<meta property="og:url" content="http://localhost:4000/2024/05/27/3d-boids-with-raylib.html" />
+<meta name="description" content="Graphics, Games and other fun stuff." />
+<meta property="og:description" content="Graphics, Games and other fun stuff." />
+<link rel="canonical" href="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html" />
+<meta property="og:url" content="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html" />
 <meta property="og:site_name" content="windhorst.dev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-05-27T00:00:00+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="3D Boids with C and Raylib" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Leon Windhorst"},"dateModified":"2024-05-27T00:00:00+02:00","datePublished":"2024-05-27T00:00:00+02:00","description":"Graphics, Games and other fun stuff :3c","headline":"3D Boids with C and Raylib","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2024/05/27/3d-boids-with-raylib.html"},"url":"http://localhost:4000/2024/05/27/3d-boids-with-raylib.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Leon Windhorst"},"dateModified":"2024-05-27T00:00:00+02:00","datePublished":"2024-05-27T00:00:00+02:00","description":"Graphics, Games and other fun stuff.","headline":"3D Boids with C and Raylib","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html"},"url":"http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="windhorst.dev" />
 </head>
@@ -53,9 +53,32 @@
   <iframe style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/tiQMZTRqvHI" allowfullscreen="allowfullscreen"></iframe>
 </div>
 
-<h2 id="todo">TODO</h2>
+<h2 id="contents">Contents</h2>
 
-  </div><a class="u-url" href="/2024/05/27/3d-boids-with-raylib.html" hidden></a>
+<ol>
+  <li><a href="#let-there-be-boids">Let there be Boids!</a></li>
+  <li><a href="#multi-threading-the-simulation-loop-with-openmp">Multi-threading the Simulation Loop with OpenMP</a></li>
+  <li><a href="#speeding-it-up-with-a-spatial-hash-grid">Speeding it up with a Spatial Hash Grid</a></li>
+</ol>
+
+<h2 id="1-let-there-be-boids">1. Let there be Boids!</h2>
+
+<h3 id="how-do-boids-generally-work">How do Boids generally work?</h3>
+<h3 id="implementing-3d-boids-with-c-and-raylib">Implementing 3D Boids with C and Raylib</h3>
+
+<h2 id="2-multi-threading-the-simulation-loop-with-openmp">2. Multi-threading the Simulation Loop with OpenMP</h2>
+
+<h3 id="dangers-to-be-aware-of-">Dangers to be aware of …</h3>
+<h3 id="-and-why-its-easy-in-this-case">… and why it’s easy in this case</h3>
+
+<h2 id="3-speeding-it-up-with-a-spatial-hash-grid">3. Speeding it up with a Spatial Hash Grid</h2>
+
+<h3 id="the-simulation-loop-is-sloooow">The Simulation Loop is sloooow</h3>
+<h3 id="how-spatial-partitioning-can-speed-it-up">How Spatial Partitioning can speed it up</h3>
+<h3 id="building-a-simple-spatial-hash-grid">Building a simple Spatial Hash Grid</h3>
+<h3 id="integrating-it-into-the-simulation-loop">Integrating it into the Simulation Loop</h3>
+
+  </div><a class="u-url" href="/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html" hidden></a>
 </article>
 
       </div>
@@ -81,7 +104,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <p>Graphics, Games and other fun stuff :3c</p>
+        <p>Graphics, Games and other fun stuff.</p>
       </div>
     </div>
 
