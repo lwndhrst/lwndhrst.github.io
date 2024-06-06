@@ -12,9 +12,6 @@ categories: c raylib boids spatial-partitioning
     allowfullscreen="allowfullscreen"
   ></iframe>
 </div>
-<br>
-
-- [github:lwndhrst/cboids](https://github.com/lwndhrst/cboids)
 
 
 
@@ -34,8 +31,10 @@ categories: c raylib boids spatial-partitioning
 While I was looking for a small project to practice what I had heard about at
 university, I stumbled upon Ben Eater's demonstration of a simple [2D Boid
 Algorithm](https://eater.net/boids). I thought it looked fun and it would allow
-me to try out a few different things such as *instanced rendering*, *spatial
-partitioning* and some basic *multi-threading*.
+me to try out a few different things such as instanced rendering, spatial
+partitioning and some simple multi-threading. If you're interested, the final
+source code is available here:
+[github:lwndhrst/cboids](https://github.com/lwndhrst/cboids).
 
 
 ### How do Boids generally work?

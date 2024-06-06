@@ -52,11 +52,6 @@
     <div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
   <iframe style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/tiQMZTRqvHI" allowfullscreen="allowfullscreen"></iframe>
 </div>
-<p><br /></p>
-
-<ul>
-  <li><a href="https://github.com/lwndhrst/cboids">github:lwndhrst/cboids</a></li>
-</ul>
 
 <h2 id="contents">Contents</h2>
 
@@ -72,8 +67,10 @@
 <p>While I was looking for a small project to practice what I had heard about at
 university, I stumbled upon Ben Eater’s demonstration of a simple <a href="https://eater.net/boids">2D Boid
 Algorithm</a>. I thought it looked fun and it would allow
-me to try out a few different things such as <em>instanced rendering</em>, <em>spatial
-partitioning</em> and some basic <em>multi-threading</em>.</p>
+me to try out a few different things such as instanced rendering, spatial
+partitioning and some simple multi-threading. If you’re interested, the final
+source code is available here:
+<a href="https://github.com/lwndhrst/cboids">github:lwndhrst/cboids</a>.</p>
 
 <h3 id="how-do-boids-generally-work">How do Boids generally work?</h3>
 
@@ -94,6 +91,7 @@ use C++.</p>
   <li>setting up the simulation loop</li>
   <li>code snippets per constraint</li>
   <li>draw call per boid</li>
+  <li>funny floating point effects at high fps</li>
 </ul>
 
 <h2 id="turning-1000-draw-calls-into-1">Turning 1000 Draw Calls into 1</h2>

@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-05-30T12:47:35+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">windhorst.dev</title><subtitle>Graphics, Games and other fun stuff.</subtitle><author><name>Leon Windhorst</name><email>leon@windhorst.dev</email></author><entry><title type="html">3D Boids with C and Raylib</title><link href="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html" rel="alternate" type="text/html" title="3D Boids with C and Raylib" /><published>2024-05-27T00:00:00+02:00</published><updated>2024-05-27T00:00:00+02:00</updated><id>http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib</id><content type="html" xml:base="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html"><![CDATA[<div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-06T09:51:30+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">windhorst.dev</title><subtitle>Graphics, Games and other fun stuff.</subtitle><author><name>Leon Windhorst</name><email>leon@windhorst.dev</email></author><entry><title type="html">3D Boids with C and Raylib</title><link href="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html" rel="alternate" type="text/html" title="3D Boids with C and Raylib" /><published>2024-05-27T00:00:00+02:00</published><updated>2024-05-27T00:00:00+02:00</updated><id>http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib</id><content type="html" xml:base="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html"><![CDATA[<div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
   <iframe style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/tiQMZTRqvHI" allowfullscreen="allowfullscreen"></iframe>
 </div>
-<p><br /></p>
-
-<ul>
-  <li><a href="https://github.com/lwndhrst/cboids">github:lwndhrst/cboids</a></li>
-</ul>
 
 <h2 id="contents">Contents</h2>
 
@@ -21,8 +16,10 @@
 <p>While I was looking for a small project to practice what I had heard about at
 university, I stumbled upon Ben Eater’s demonstration of a simple <a href="https://eater.net/boids">2D Boid
 Algorithm</a>. I thought it looked fun and it would allow
-me to try out a few different things such as <em>instanced rendering</em>, <em>spatial
-partitioning</em> and some basic <em>multi-threading</em>.</p>
+me to try out a few different things such as instanced rendering, spatial
+partitioning and some simple multi-threading. If you’re interested, the final
+source code is available here:
+<a href="https://github.com/lwndhrst/cboids">github:lwndhrst/cboids</a>.</p>
 
 <h3 id="how-do-boids-generally-work">How do Boids generally work?</h3>
 
@@ -43,6 +40,7 @@ use C++.</p>
   <li>setting up the simulation loop</li>
   <li>code snippets per constraint</li>
   <li>draw call per boid</li>
+  <li>funny floating point effects at high fps</li>
 </ul>
 
 <h2 id="turning-1000-draw-calls-into-1">Turning 1000 Draw Calls into 1</h2>
