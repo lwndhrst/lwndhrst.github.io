@@ -74,21 +74,54 @@ source code is available here:
 
 <h3 id="how-do-boids-generally-work">How do Boids generally work?</h3>
 
-<p>TODO:</p>
-<ul>
-  <li>boid properties</li>
-  <li>behavioral constraints + pseudocode</li>
-  <li><a href="https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html">https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html</a></li>
-</ul>
+<p>The term <em>boid</em> refers to <em>bird-like objects</em> and is typically used in the
+context of flocking simulations that try to mimic the swarm behavior of birds.
+Each individual boid underlies a set of constraints that determines its
+behavior. These constraints can be purely based on the position, orientation
+and velocity of other boids that are part of the same scene. By incorporating
+other factors such as the position of the user’s mouse cursor or the size of
+the visible area, this core set of behavioral rules can be arbitrarily
+extended.</p>
+
+<p>It would be quite boring if I were to recite the historical background of boids
+and how their core behavioral constraints were derived. For the sake of this
+article, let’s just have a brief look at the three main rules that <a href="https://doi.org/10.1145%2F37401.37406">Craig W.
+Reynolds describes in his paper</a> from
+1987:</p>
+
+<ol>
+  <li><em>Collision Avoidance</em>: avoid collisions with nearby flockmates</li>
+  <li><em>Velocity Matching</em>: attempt to match velocity with nearby flockmates</li>
+  <li><em>Flock Centering</em>: attempt to stay close to nearby flockmates</li>
+</ol>
+
+<p>With just these three simple ideas, it is possible to create surprisingly
+realistic flocking behavior.</p>
 
 <h3 id="implementing-3d-boids-with-c-and-raylib">Implementing 3D Boids with C and Raylib</h3>
 
 <p>Pretty much all of our Computer Graphics courses at university required us to
 use C++.</p>
 
+<p>Based on <a href="https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html">V. Hunter Adams
+article</a>
+and the pseudocode he provides, I chose to implement the following simulation
+parameters, which can later be used to influence the simulation:</p>
+
+<ul>
+  <li>turn_factor;</li>
+  <li>visual_range;</li>
+  <li>protected_range;</li>
+  <li>centering_factor;</li>
+  <li>avoid_factor;</li>
+  <li>matching_factor;</li>
+  <li>max_speed;</li>
+  <li>min_speed;</li>
+</ul>
+
 <p>TODO:</p>
 <ul>
-  <li>setting up the simulation loop</li>
+  <li>setting up the simulation loop (joy of using raylib and plain c)</li>
   <li>code snippets per constraint</li>
   <li>draw call per boid</li>
   <li>funny floating point effects at high fps</li>

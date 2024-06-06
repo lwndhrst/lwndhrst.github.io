@@ -39,10 +39,27 @@ source code is available here:
 
 ### How do Boids generally work?
 
-TODO:
-- boid properties
-- behavioral constraints + pseudocode
-- [https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html](https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html)
+The term *boid* refers to *bird-like objects* and is typically used in the
+context of flocking simulations that try to mimic the swarm behavior of birds.
+Each individual boid underlies a set of constraints that determines its
+behavior. These constraints can be purely based on the position, orientation
+and velocity of other boids that are part of the same scene. By incorporating
+other factors such as the position of the user's mouse cursor or the size of
+the visible area, this core set of behavioral rules can be arbitrarily
+extended.
+
+It would be quite boring if I were to recite the historical background of boids
+and how their core behavioral constraints were derived. For the sake of this
+article, let's just have a brief look at the three main rules that [Craig W.
+Reynolds describes in his paper](https://doi.org/10.1145%2F37401.37406) from
+1987:
+
+1. *Collision Avoidance*: avoid collisions with nearby flockmates
+2. *Velocity Matching*: attempt to match velocity with nearby flockmates
+3. *Flock Centering*: attempt to stay close to nearby flockmates
+
+With just these three simple ideas, it is possible to create surprisingly
+realistic flocking behavior.
 
 
 ### Implementing 3D Boids with C and Raylib
@@ -50,8 +67,22 @@ TODO:
 Pretty much all of our Computer Graphics courses at university required us to
 use C++.
 
+Based on [V. Hunter Adams
+article](https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html)
+and the pseudocode he provides, I chose to implement the following simulation
+parameters, which can later be used to influence the simulation:
+
+- turn_factor;
+- visual_range;
+- protected_range;
+- centering_factor;
+- avoid_factor;
+- matching_factor;
+- max_speed;
+- min_speed;
+
 TODO:
-- setting up the simulation loop
+- setting up the simulation loop (joy of using raylib and plain c)
 - code snippets per constraint
 - draw call per boid
 - funny floating point effects at high fps
