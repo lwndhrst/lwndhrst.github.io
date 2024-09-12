@@ -50,16 +50,16 @@ extended.
 
 It would be quite boring if I were to recite the historical background of boids
 and how their core behavioral constraints were derived. For the sake of this
-article, let's just have a brief look at the three main rules that [Craig W.
-Reynolds describes in his paper](https://doi.org/10.1145%2F37401.37406) from
-1987:
+article, let's just have a brief look at the three main rules that Craig W.
+Reynolds describes in his [paper from
+1987](https://doi.org/10.1145%2F37401.37406):
 
 1. *Collision Avoidance*: avoid collisions with nearby flockmates
 2. *Velocity Matching*: attempt to match velocity with nearby flockmates
 3. *Flock Centering*: attempt to stay close to nearby flockmates
 
-With just these three simple ideas, it is possible to create surprisingly
-realistic flocking behavior.
+With just these simple ideas, it is possible to create surprisingly realistic
+flocking behavior.
 
 
 ### Implementing 3D Boids with C and Raylib
@@ -67,10 +67,13 @@ realistic flocking behavior.
 Pretty much all of our Computer Graphics courses at university required us to
 use C++.
 
+TODO:
+- explain decision for c and raylib
+
 Based on [V. Hunter Adams
 article](https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html)
 and the pseudocode he provides, I chose to implement the following simulation
-parameters, which can later be used to influence the simulation:
+parameters:
 
 - turn_factor;
 - visual_range;

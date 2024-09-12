@@ -34,7 +34,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/">Home</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/">Blog</a><a class="page-link" href="/about/">About</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -85,9 +85,9 @@ extended.</p>
 
 <p>It would be quite boring if I were to recite the historical background of boids
 and how their core behavioral constraints were derived. For the sake of this
-article, let’s just have a brief look at the three main rules that <a href="https://doi.org/10.1145%2F37401.37406">Craig W.
-Reynolds describes in his paper</a> from
-1987:</p>
+article, let’s just have a brief look at the three main rules that Craig W.
+Reynolds describes in his <a href="https://doi.org/10.1145%2F37401.37406">paper from
+1987</a>:</p>
 
 <ol>
   <li><em>Collision Avoidance</em>: avoid collisions with nearby flockmates</li>
@@ -95,18 +95,23 @@ Reynolds describes in his paper</a> from
   <li><em>Flock Centering</em>: attempt to stay close to nearby flockmates</li>
 </ol>
 
-<p>With just these three simple ideas, it is possible to create surprisingly
-realistic flocking behavior.</p>
+<p>With just these simple ideas, it is possible to create surprisingly realistic
+flocking behavior.</p>
 
 <h3 id="implementing-3d-boids-with-c-and-raylib">Implementing 3D Boids with C and Raylib</h3>
 
 <p>Pretty much all of our Computer Graphics courses at university required us to
 use C++.</p>
 
+<p>TODO:</p>
+<ul>
+  <li>explain decision for c and raylib</li>
+</ul>
+
 <p>Based on <a href="https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html">V. Hunter Adams
 article</a>
 and the pseudocode he provides, I chose to implement the following simulation
-parameters, which can later be used to influence the simulation:</p>
+parameters:</p>
 
 <ul>
   <li>turn_factor;</li>

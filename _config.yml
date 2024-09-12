@@ -33,7 +33,6 @@ url: "https://windhorst.dev" # the base hostname & protocol for your site, e.g. 
 
 header_pages:
   - index.md
-  - blog.md
   - about.md
 
 # Build settings

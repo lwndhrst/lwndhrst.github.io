@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-06T14:41:36+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">windhorst.dev</title><subtitle>Graphics, Games and other fun stuff.</subtitle><author><name>Leon Windhorst</name><email>leon@windhorst.dev</email></author><entry><title type="html">3D Boids with C and Raylib</title><link href="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html" rel="alternate" type="text/html" title="3D Boids with C and Raylib" /><published>2024-05-27T00:00:00+02:00</published><updated>2024-05-27T00:00:00+02:00</updated><id>http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib</id><content type="html" xml:base="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html"><![CDATA[<div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-12T16:24:14+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">windhorst.dev</title><subtitle>Graphics, Games and other fun stuff.</subtitle><author><name>Leon Windhorst</name><email>leon@windhorst.dev</email></author><entry><title type="html">3D Boids with C and Raylib</title><link href="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html" rel="alternate" type="text/html" title="3D Boids with C and Raylib" /><published>2024-05-27T00:00:00+02:00</published><updated>2024-05-27T00:00:00+02:00</updated><id>http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib</id><content type="html" xml:base="http://localhost:4000/c/raylib/boids/spatial-partitioning/2024/05/27/3d-boids-with-raylib.html"><![CDATA[<div style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%;">
   <iframe style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/tiQMZTRqvHI" allowfullscreen="allowfullscreen"></iframe>
 </div>
 
@@ -34,9 +34,9 @@ extended.</p>
 
 <p>It would be quite boring if I were to recite the historical background of boids
 and how their core behavioral constraints were derived. For the sake of this
-article, let’s just have a brief look at the three main rules that <a href="https://doi.org/10.1145%2F37401.37406">Craig W.
-Reynolds describes in his paper</a> from
-1987:</p>
+article, let’s just have a brief look at the three main rules that Craig W.
+Reynolds describes in his <a href="https://doi.org/10.1145%2F37401.37406">paper from
+1987</a>:</p>
 
 <ol>
   <li><em>Collision Avoidance</em>: avoid collisions with nearby flockmates</li>
@@ -44,18 +44,23 @@ Reynolds describes in his paper</a> from
   <li><em>Flock Centering</em>: attempt to stay close to nearby flockmates</li>
 </ol>
 
-<p>With just these three simple ideas, it is possible to create surprisingly
-realistic flocking behavior.</p>
+<p>With just these simple ideas, it is possible to create surprisingly realistic
+flocking behavior.</p>
 
 <h3 id="implementing-3d-boids-with-c-and-raylib">Implementing 3D Boids with C and Raylib</h3>
 
 <p>Pretty much all of our Computer Graphics courses at university required us to
 use C++.</p>
 
+<p>TODO:</p>
+<ul>
+  <li>explain decision for c and raylib</li>
+</ul>
+
 <p>Based on <a href="https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html">V. Hunter Adams
 article</a>
 and the pseudocode he provides, I chose to implement the following simulation
-parameters, which can later be used to influence the simulation:</p>
+parameters:</p>
 
 <ul>
   <li>turn_factor;</li>
