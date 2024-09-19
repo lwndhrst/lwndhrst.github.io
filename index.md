@@ -1,5 +1,7 @@
 ---
 layout: blog
-title: Blog
+title: Posts
 permalink: /
 ---
+
+Nothing here yet...
