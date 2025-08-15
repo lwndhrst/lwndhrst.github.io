@@ -49,6 +49,10 @@ if ("${PLATFORM}" STREQUAL "Web")
     # Tell Emscripten to build an example.html file.
     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".html")
     target_link_options(${PROJECT_NAME} PUBLIC -sUSE_GLFW=3 PUBLIC --preload-file resources)
+
+    # Fix generated compile_commands.json to also include Emscripten flags
+    execute_process(COMMAND emcc --cflags OUTPUT_VARIABLE EM_CFLAGS)
+    set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "${EM_CFLAGS}")
 endif()
 
 # Checks if OSX and links appropriate frameworks (Only required on MacOS)

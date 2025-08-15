@@ -11,7 +11,9 @@
       pkgs = import nixpkgs { inherit system; };
 
     in {
-      devShell.${system} = pkgs.mkShell.override { stdenv = pkgs.llvmPackages.stdenv; } {
+      # devShell.${system} = pkgs.mkShell.override { stdenv = pkgs.llvmPackages.stdenv; } {
+      # devShell.${system} = pkgs.mkShell.override { stdenv = pkgs.emscriptenStdenv; } {
+      devShell.${system} = pkgs.mkShell {
         packages = with pkgs; [
           pkg-config
 
@@ -29,7 +31,7 @@
         ];
 
         shellHook = ''
-          export EM_CACHE="$(pwd)/build/emscripten-cache"; # emscripten tries to write to its nix store path without this
+          export EM_CACHE=$(pwd)/.emscripten-cache # emscripten tries to write to its nix store path without this
         '';
       };
     };
