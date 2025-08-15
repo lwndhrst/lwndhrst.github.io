@@ -17,7 +17,8 @@
         packages = with pkgs; [
           pkg-config
 
-          clang-tools
+          llvmPackages.clang-unwrapped
+          # clang-tools
           cmake
           emscripten
           ninja
