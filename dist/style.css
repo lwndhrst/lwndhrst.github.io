@@ -1,8 +1,9 @@
-html, body {
-    margin: 0px;
-    padding: 0px;
+#canvas-container {
+    margin: 3rem 15%;
+    width: 70%;
+    text-align: center;
 }
 
 #canvas {
-    width: 100%;
+    max-width: 100%;
 }
