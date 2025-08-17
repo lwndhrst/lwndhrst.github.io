@@ -16,10 +16,7 @@ static void draw(void);
 static void update_and_draw(void);
 static void cleanup(void);
 
-bool test_button_callback(int eventType, const EmscriptenMouseEvent *e, void *userData) {
-    emscripten_console_log("congrats, you clicked the button!");
-    return 0;
-}
+static bool nav_boids_callback(int eventType, const EmscriptenMouseEvent *e, void *userData);
 
 int main(void)
 {
@@ -34,7 +31,7 @@ int main(void)
 
 void init(void)
 {
-    emscripten_set_click_callback("#test-button", 0, 1, test_button_callback);
+    emscripten_set_click_callback("#nav-boids", 0, 1, nav_boids_callback);
 
     InitWindow(screenWidth, screenHeight, "windhorst.dev");
 }
@@ -63,4 +60,9 @@ void update_and_draw(void)
 void cleanup(void)
 {
     CloseWindow();
+}
+
+bool nav_boids_callback(int eventType, const EmscriptenMouseEvent *e, void *userData) {
+    emscripten_console_log("loading boids scene...");
+    return 0;
 }

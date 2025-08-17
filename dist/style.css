@@ -2,16 +2,39 @@ html, body {
     margin: 0rem;
     padding: 0rem;
     height: 100%;
-    background: #000;
+    background: #111;
 }
 
 .flex-container {
     display: flex;
+    gap: 1rem;
     padding: 1rem;
 }
 
 #nav-container {
     flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: #222;
+}
+
+.nav-item-thumbnail {
+    width: 8rem;
+    height: 4.5rem;
+    background-size: 100% 100%;
+}
+
+.nav-item-text {
+    display: flex;
+    align-items: center;
 }
 
 #canvas-container {
