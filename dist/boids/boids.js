@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/nix-shell.SrhNxC/tmpb19ypt0x.js
+// include: /tmp/nix-shell.SrhNxC/tmp_ybgh2jq.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -46,8 +46,8 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
         // web worker
         PACKAGE_PATH = encodeURIComponent(location.pathname.substring(0, location.pathname.lastIndexOf('/')) + '/');
       }
-      var PACKAGE_NAME = 'lwndhrst.github.io/lwndhrst.github.io.data';
-      var REMOTE_PACKAGE_BASE = 'lwndhrst.github.io.data';
+      var PACKAGE_NAME = '/home/leon/Projects/lwndhrst.github.io/dist/boids/boids.data';
+      var REMOTE_PACKAGE_BASE = 'boids.data';
       var REMOTE_PACKAGE_NAME = Module['locateFile'] ? Module['locateFile'](REMOTE_PACKAGE_BASE, '') : REMOTE_PACKAGE_BASE;
 var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
 
@@ -137,7 +137,13 @@ var REMOTE_PACKAGE_SIZE = metadata['remote_package_size'];
       function assert(check, msg) {
         if (!check) throw msg + new Error().stack;
       }
-Module['FS_createPath']("/", "resources", true, true);
+Module['FS_createPath']("/", "home", true, true);
+Module['FS_createPath']("/home", "leon", true, true);
+Module['FS_createPath']("/home/leon", "Projects", true, true);
+Module['FS_createPath']("/home/leon/Projects", "lwndhrst.github.io", true, true);
+Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io", "dist", true, true);
+Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist", "boids", true, true);
+Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist/boids", "resources", true, true);
 
       /** @constructor */
       function DataRequest(start, end, audio) {
@@ -181,10 +187,10 @@ Module['FS_createPath']("/", "resources", true, true);
           var files = metadata['files'];
           for (var i = 0; i < files.length; ++i) {
             DataRequest.prototype.requests[files[i].filename].onload();
-          }          Module['removeRunDependency']('datafile_lwndhrst.github.io/lwndhrst.github.io.data');
+          }          Module['removeRunDependency']('datafile_/home/leon/Projects/lwndhrst.github.io/dist/boids/boids.data');
 
       };
-      Module['addRunDependency']('datafile_lwndhrst.github.io/lwndhrst.github.io.data');
+      Module['addRunDependency']('datafile_/home/leon/Projects/lwndhrst.github.io/dist/boids/boids.data');
 
       Module['preloadResults'] ??= {};
 
@@ -204,25 +210,25 @@ Module['FS_createPath']("/", "resources", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/resources/nothing.md", "start": 0, "end": 10}], "remote_package_size": 10});
+    loadPackage({"files": [{"filename": "/home/leon/Projects/lwndhrst.github.io/dist/boids/resources/favicon.png", "start": 0, "end": 4552}], "remote_package_size": 4552});
 
   })();
 
-// end include: /tmp/nix-shell.SrhNxC/tmpb19ypt0x.js
-// include: /tmp/nix-shell.SrhNxC/tmphlb1opc9.js
+// end include: /tmp/nix-shell.SrhNxC/tmp_ybgh2jq.js
+// include: /tmp/nix-shell.SrhNxC/tmpcg0mz6a_.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/nix-shell.SrhNxC/tmphlb1opc9.js
-// include: /tmp/nix-shell.SrhNxC/tmp5e7_1fim.js
+  // end include: /tmp/nix-shell.SrhNxC/tmpcg0mz6a_.js
+// include: /tmp/nix-shell.SrhNxC/tmpuwotpug5.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/nix-shell.SrhNxC/tmp5e7_1fim.js
+  // end include: /tmp/nix-shell.SrhNxC/tmpuwotpug5.js
 
 
 var arguments_ = [];
@@ -829,7 +835,7 @@ function createExportWrapper(name, nargs) {
 var wasmBinaryFile;
 
 function findWasmBinary() {
-    return locateFile('lwndhrst.github.io.wasm');
+    return locateFile('boids.wasm');
 }
 
 function getBinarySync(file) {
@@ -4113,11 +4119,6 @@ async function createWasm() {
     };
   var _emscripten_asm_const_int = (code, sigPtr, argbuf) => {
       return runEmAsmFunction(code, sigPtr, argbuf);
-    };
-
-  var _emscripten_console_log = (str) => {
-      assert(typeof str == 'number');
-      console.log(UTF8ToString(str));
     };
 
 
@@ -9609,48 +9610,48 @@ function checkIncomingModuleAPI() {
   ignoredModuleProp('fetchSettings');
 }
 var ASM_CONSTS = {
-  93128: () => { if (document.fullscreenElement) return 1; },  
- 93174: () => { return document.getElementById('canvas').width; },  
- 93226: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 93294: () => { document.exitFullscreen(); },  
- 93321: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
- 93394: () => { if (document.fullscreenElement) return 1; },  
- 93440: () => { return document.getElementById('canvas').width; },  
- 93492: () => { return screen.width; },  
- 93517: () => { document.exitFullscreen(); },  
- 93544: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
- 93677: () => { return window.innerWidth; },  
- 93703: () => { return window.innerHeight; },  
- 93730: () => { if (document.fullscreenElement) return 1; },  
- 93776: () => { return document.getElementById('canvas').width; },  
- 93828: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 93896: () => { if (document.fullscreenElement) return 1; },  
- 93942: () => { return document.getElementById('canvas').width; },  
- 93994: () => { return screen.width; },  
- 94019: () => { return window.innerWidth; },  
- 94045: () => { return window.innerHeight; },  
- 94072: () => { if (document.fullscreenElement) return 1; },  
- 94118: () => { return document.getElementById('canvas').width; },  
- 94170: () => { return screen.width; },  
- 94195: () => { document.exitFullscreen(); },  
- 94222: () => { if (document.fullscreenElement) return 1; },  
- 94268: () => { return document.getElementById('canvas').width; },  
- 94320: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 94388: () => { document.exitFullscreen(); },  
- 94415: ($0) => { document.getElementById('canvas').style.opacity = $0; },  
- 94473: () => { return screen.width; },  
- 94498: () => { return screen.height; },  
- 94524: () => { return window.screenX; },  
- 94551: () => { return window.screenY; },  
- 94578: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 94631: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 94702: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 94759: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
- 95015: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
- 95086: () => { if (document.fullscreenElement) return 1; },  
- 95132: () => { return window.innerWidth; },  
- 95158: () => { return window.innerHeight; },  
- 95185: () => { if (document.pointerLockElement) return 1; }
+  93096: () => { if (document.fullscreenElement) return 1; },  
+ 93142: () => { return document.getElementById('canvas').width; },  
+ 93194: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 93262: () => { document.exitFullscreen(); },  
+ 93289: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
+ 93362: () => { if (document.fullscreenElement) return 1; },  
+ 93408: () => { return document.getElementById('canvas').width; },  
+ 93460: () => { return screen.width; },  
+ 93485: () => { document.exitFullscreen(); },  
+ 93512: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
+ 93645: () => { return window.innerWidth; },  
+ 93671: () => { return window.innerHeight; },  
+ 93698: () => { if (document.fullscreenElement) return 1; },  
+ 93744: () => { return document.getElementById('canvas').width; },  
+ 93796: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 93864: () => { if (document.fullscreenElement) return 1; },  
+ 93910: () => { return document.getElementById('canvas').width; },  
+ 93962: () => { return screen.width; },  
+ 93987: () => { return window.innerWidth; },  
+ 94013: () => { return window.innerHeight; },  
+ 94040: () => { if (document.fullscreenElement) return 1; },  
+ 94086: () => { return document.getElementById('canvas').width; },  
+ 94138: () => { return screen.width; },  
+ 94163: () => { document.exitFullscreen(); },  
+ 94190: () => { if (document.fullscreenElement) return 1; },  
+ 94236: () => { return document.getElementById('canvas').width; },  
+ 94288: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 94356: () => { document.exitFullscreen(); },  
+ 94383: ($0) => { document.getElementById('canvas').style.opacity = $0; },  
+ 94441: () => { return screen.width; },  
+ 94466: () => { return screen.height; },  
+ 94492: () => { return window.screenX; },  
+ 94519: () => { return window.screenY; },  
+ 94546: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 94599: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 94670: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 94727: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
+ 94983: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
+ 95054: () => { if (document.fullscreenElement) return 1; },  
+ 95100: () => { return window.innerWidth; },  
+ 95126: () => { return window.innerHeight; },  
+ 95153: () => { if (document.pointerLockElement) return 1; }
 };
 
 // Imports from the Wasm binary.
@@ -9700,8 +9701,6 @@ var wasmImports = {
   clock_time_get: _clock_time_get,
   /** @export */
   emscripten_asm_const_int: _emscripten_asm_const_int,
-  /** @export */
-  emscripten_console_log: _emscripten_console_log,
   /** @export */
   emscripten_date_now: _emscripten_date_now,
   /** @export */

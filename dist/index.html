@@ -8,31 +8,23 @@
     </head>
 
     <body>
-        <div class="flex-container">
-            <div id="nav-container">
-                <h1>windhorst.dev</h1>
-                <nav id="nav">
-                    <div id="nav-boids" class="nav-item">
-                        <div class="nav-item-thumbnail" style="background-image: url('/favicon.png');"></div>
-                        <div class="nav-item-text">
-                            boids
-                        </div>
-                    </div>
-                </nav>
+        <h1>windhorst.dev</h1>
+        <nav>
+            <!-- boids -->
+            <div class="nav-item" onclick="location.href='boids/boids.html';">
+                <div class="nav-item-thumbnail" style="background-image: url('/favicon.png');"></div>
+                <div class="nav-item-text">
+                    boids
+                </div>
             </div>
-            <div id="canvas-container">
-                <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-            </div>
-        </div>
-        <div id="footer">
-            footer
-        </div>
 
-        <script type='text/javascript'>
-            var Module = {
-                canvas: (function() { return document.getElementById('canvas'); })()
-            };
-        </script>
-        <script src="lwndhrst.github.io.js"></script>
+            <!-- floppy bat -->
+            <div class="nav-item" onclick="location.href='floppy-bat/floppy-bat.html';">
+                <div class="nav-item-thumbnail" style="background-image: url('/favicon.png');"></div>
+                <div class="nav-item-text">
+                    floppy-bat
+                </div>
+            </div>
+        </nav>
     </body>
 </html>

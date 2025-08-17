@@ -16,8 +16,6 @@ static void draw(void);
 static void update_and_draw(void);
 static void cleanup(void);
 
-static bool nav_boids_callback(int eventType, const EmscriptenMouseEvent *e, void *userData);
-
 int main(void)
 {
     init();
@@ -31,9 +29,7 @@ int main(void)
 
 void init(void)
 {
-    emscripten_set_click_callback("#nav-boids", 0, 1, nav_boids_callback);
-
-    InitWindow(screenWidth, screenHeight, "windhorst.dev");
+    InitWindow(screenWidth, screenHeight, "floppy bat | windhorst.dev");
 }
 
 void update(void)
@@ -42,7 +38,7 @@ void update(void)
 
 void draw(void)
 {
-    const char* text = "hello there! :3c";
+    const char* text = "floppy bat";
 
     BeginDrawing();
         ClearBackground(RAYWHITE);
@@ -60,9 +56,4 @@ void update_and_draw(void)
 void cleanup(void)
 {
     CloseWindow();
-}
-
-bool nav_boids_callback(int eventType, const EmscriptenMouseEvent *e, void *userData) {
-    emscripten_console_log("loading boids scene...");
-    return 0;
 }
