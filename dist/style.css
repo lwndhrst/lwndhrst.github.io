@@ -36,7 +36,7 @@ h1 {
     align-items: center;
 }
 
-#emscripten-canvas {
+#canvas {
     width: 100%;
     max-height: 100%;
     display: block;

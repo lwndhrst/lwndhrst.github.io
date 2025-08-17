@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/nix-shell.SrhNxC/tmp39_5eq67.js
+// include: /tmp/nix-shell.SrhNxC/tmpy_xitnpf.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -143,7 +143,7 @@ Module['FS_createPath']("/home/leon", "Projects", true, true);
 Module['FS_createPath']("/home/leon/Projects", "lwndhrst.github.io", true, true);
 Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io", "dist", true, true);
 Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist", "raylib-emscripten-base", true, true);
-Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist/raylib-emscripten-base", "resources", true, true);
+Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist/raylib-emscripten-base", "assets", true, true);
 
       /** @constructor */
       function DataRequest(start, end, audio) {
@@ -210,25 +210,25 @@ Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist/raylib-emsc
     }
 
     }
-    loadPackage({"files": [{"filename": "/home/leon/Projects/lwndhrst.github.io/dist/raylib-emscripten-base/resources/favicon.png", "start": 0, "end": 4552}], "remote_package_size": 4552});
+    loadPackage({"files": [{"filename": "/home/leon/Projects/lwndhrst.github.io/dist/raylib-emscripten-base/assets/favicon.png", "start": 0, "end": 4552}], "remote_package_size": 4552});
 
   })();
 
-// end include: /tmp/nix-shell.SrhNxC/tmp39_5eq67.js
-// include: /tmp/nix-shell.SrhNxC/tmp88ims6iy.js
+// end include: /tmp/nix-shell.SrhNxC/tmpy_xitnpf.js
+// include: /tmp/nix-shell.SrhNxC/tmp02ytbffq.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/nix-shell.SrhNxC/tmp88ims6iy.js
-// include: /tmp/nix-shell.SrhNxC/tmp53kwkv21.js
+  // end include: /tmp/nix-shell.SrhNxC/tmp02ytbffq.js
+// include: /tmp/nix-shell.SrhNxC/tmpfskg9opr.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/nix-shell.SrhNxC/tmp53kwkv21.js
+  // end include: /tmp/nix-shell.SrhNxC/tmpfskg9opr.js
 
 
 var arguments_ = [];
