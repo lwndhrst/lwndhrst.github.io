@@ -1,9 +1,30 @@
+html, body {
+    margin: 0rem;
+    padding: 0rem;
+    height: 100%;
+    background: #000;
+}
+
+.flex-container {
+    display: flex;
+    padding: 1rem;
+}
+
+#nav-container {
+    flex: 1;
+}
+
 #canvas-container {
-    margin: 3rem 15%;
-    width: 70%;
+    flex: 4;
     text-align: center;
 }
 
 #canvas {
     max-width: 100%;
+    display: block;
+}
+
+#footer {
+    padding: 1rem 1rem;
+    text-align: right;
 }
