@@ -2,6 +2,7 @@
 
 #include <emscripten/emscripten.h>
 #include <emscripten/html5.h>
+#include <emscripten/console.h>
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -16,7 +17,7 @@ static void update_and_draw(void);
 static void cleanup(void);
 
 bool test_button_callback(int eventType, const EmscriptenMouseEvent *e, void *userData) {
-    emscripten_run_script("console.log('congrats, you clicked the button');");
+    emscripten_console_log("congrats, you clicked the button!");
     return 0;
 }
 
