@@ -6,6 +6,9 @@ file(GLOB_RECURSE SOURCE_FILES CONFIGURE_DEPENDS *.c)
 file(GLOB_RECURSE HEADER_FILES CONFIGURE_DEPENDS *.h)
 target_sources(${TARGET_NAME} PRIVATE ${SOURCE_FILES} ${HEADER_FILES})
 
+set(ASSETS_PATH "/assets")
+target_compile_definitions(${TARGET_NAME} PUBLIC ASSETS_PATH="${ASSETS_PATH}")
+
 set_target_properties(${TARGET_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/dist/${TARGET_NAME})
 
 set_property(TARGET ${TARGET_NAME} PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:${TARGET_NAME}>)
@@ -31,7 +34,7 @@ target_link_libraries(${TARGET_NAME} raylib)
 if ("${PLATFORM}" STREQUAL "Web")
     # Tell Emscripten to build an example.html file
     # set_target_properties(${TARGET_NAME} PROPERTIES SUFFIX ".html")
-    target_link_options(${TARGET_NAME} PUBLIC -sUSE_GLFW=3 PUBLIC --preload-file $<TARGET_FILE_DIR:${TARGET_NAME}>/assets)
+    target_link_options(${TARGET_NAME} PUBLIC -sUSE_GLFW=3 -sASYNCIFY PUBLIC --preload-file $<TARGET_FILE_DIR:${TARGET_NAME}>/assets@${ASSETS_PATH})
 
     # Fix generated compile_commands.json to also include Emscripten flags
     execute_process(COMMAND emcc --cflags OUTPUT_VARIABLE EM_CFLAGS)

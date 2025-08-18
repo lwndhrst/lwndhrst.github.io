@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/nix-shell.qSEQb9/tmp0ul2s9sa.js
+// include: /tmp/nix-shell.qSEQb9/tmpgqcq0u5l.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -210,25 +210,25 @@ Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist/raylib-emsc
     }
 
     }
-    loadPackage({"files": [{"filename": "/home/leon/Projects/lwndhrst.github.io/dist/raylib-emscripten-base/assets/favicon.png", "start": 0, "end": 4552}], "remote_package_size": 4552});
+    loadPackage({"files": [{"filename": "/home/leon/Projects/lwndhrst.github.io/dist/raylib-emscripten-base/assets/favicon.png", "start": 0, "end": 4552}, {"filename": "/home/leon/Projects/lwndhrst.github.io/dist/raylib-emscripten-base/assets/thumbnail.png", "start": 4552, "end": 9104}], "remote_package_size": 9104});
 
   })();
 
-// end include: /tmp/nix-shell.qSEQb9/tmp0ul2s9sa.js
-// include: /tmp/nix-shell.qSEQb9/tmph4r_c754.js
+// end include: /tmp/nix-shell.qSEQb9/tmpgqcq0u5l.js
+// include: /tmp/nix-shell.qSEQb9/tmpz_f5q1f3.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/nix-shell.qSEQb9/tmph4r_c754.js
-// include: /tmp/nix-shell.qSEQb9/tmphcofe5ti.js
+  // end include: /tmp/nix-shell.qSEQb9/tmpz_f5q1f3.js
+// include: /tmp/nix-shell.qSEQb9/tmp2xqtqouu.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/nix-shell.qSEQb9/tmphcofe5ti.js
+  // end include: /tmp/nix-shell.qSEQb9/tmp2xqtqouu.js
 
 
 var arguments_ = [];

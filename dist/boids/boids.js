@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/nix-shell.qSEQb9/tmpyuy99elz.js
+// include: /tmp/nix-shell.qSEQb9/tmpr97reu1i.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -210,25 +210,25 @@ Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist/boids", "as
     }
 
     }
-    loadPackage({"files": [{"filename": "/home/leon/Projects/lwndhrst.github.io/dist/boids/assets/favicon.png", "start": 0, "end": 4552}], "remote_package_size": 4552});
+    loadPackage({"files": [{"filename": "/home/leon/Projects/lwndhrst.github.io/dist/boids/assets/favicon.png", "start": 0, "end": 4552}, {"filename": "/home/leon/Projects/lwndhrst.github.io/dist/boids/assets/thumbnail.png", "start": 4552, "end": 74346}], "remote_package_size": 74346});
 
   })();
 
-// end include: /tmp/nix-shell.qSEQb9/tmpyuy99elz.js
-// include: /tmp/nix-shell.qSEQb9/tmp703840da.js
+// end include: /tmp/nix-shell.qSEQb9/tmpr97reu1i.js
+// include: /tmp/nix-shell.qSEQb9/tmp94dpzvvw.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/nix-shell.qSEQb9/tmp703840da.js
-// include: /tmp/nix-shell.qSEQb9/tmp9f3mbt6s.js
+  // end include: /tmp/nix-shell.qSEQb9/tmp94dpzvvw.js
+// include: /tmp/nix-shell.qSEQb9/tmprq1rql2a.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/nix-shell.qSEQb9/tmp9f3mbt6s.js
+  // end include: /tmp/nix-shell.qSEQb9/tmprq1rql2a.js
 
 
 var arguments_ = [];
