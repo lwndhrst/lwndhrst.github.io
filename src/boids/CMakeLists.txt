@@ -26,6 +26,7 @@ endif()
 
 # set(raylib_VERBOSE 1)
 target_link_libraries(${TARGET_NAME} raylib)
+target_include_directories(${TARGET_NAME} PRIVATE ${raygui_SOURCE_DIR}/src)
 
 # Web Configurations
 if ("${PLATFORM}" STREQUAL "Web")

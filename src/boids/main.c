@@ -1,4 +1,5 @@
 #include <raylib.h>
+#include <raygui.h>
 
 #include <emscripten/emscripten.h>
 #include <emscripten/html5.h>
