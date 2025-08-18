@@ -11,30 +11,33 @@ h1 {
 }
 
 .index-content {
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 
 .nav-item {
-    display: flex;
     padding: 1rem;
     cursor: pointer;
+    margin: 0rem 1rem 1rem 0rem;
+    background: #222;
 }
 
 .nav-item:hover {
-    background: #222;
+    background: #333;
 }
 
 .nav-item-thumbnail {
     /* 16:9 aspect ratio */
-    width: 8rem;
-    height: 4.5rem;
+    aspect-ratio: 16 / 9;
+    width: 100%;
     background-size: 100% 100%;
 }
 
-.nav-item-text {
-    display: flex;
-    align-items: center;
-}
+.nav-item-text {}
 
 #canvas {
     width: 100%;
