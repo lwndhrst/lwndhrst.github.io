@@ -27,7 +27,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/nix-shell.qSEQb9/tmp1j0nckor.js
+// include: /tmp/nix-shell.qSEQb9/tmp3m5hchro.js
 
   Module['expectedDataFileDownloads'] ??= 0;
   Module['expectedDataFileDownloads']++;
@@ -214,21 +214,21 @@ Module['FS_createPath']("/home/leon/Projects/lwndhrst.github.io/dist/floppy-bat"
 
   })();
 
-// end include: /tmp/nix-shell.qSEQb9/tmp1j0nckor.js
-// include: /tmp/nix-shell.qSEQb9/tmpbn0qehxd.js
+// end include: /tmp/nix-shell.qSEQb9/tmp3m5hchro.js
+// include: /tmp/nix-shell.qSEQb9/tmp2zc5mg99.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/nix-shell.qSEQb9/tmpbn0qehxd.js
-// include: /tmp/nix-shell.qSEQb9/tmpey1pph9o.js
+  // end include: /tmp/nix-shell.qSEQb9/tmp2zc5mg99.js
+// include: /tmp/nix-shell.qSEQb9/tmp9x7fr1hg.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/nix-shell.qSEQb9/tmpey1pph9o.js
+  // end include: /tmp/nix-shell.qSEQb9/tmp9x7fr1hg.js
 
 
 var arguments_ = [];
