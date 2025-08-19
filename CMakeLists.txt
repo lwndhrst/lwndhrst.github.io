@@ -5,6 +5,9 @@ include(FetchContent)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
+
 set(RAYLIB_VERSION 5.5)
 FetchContent_Declare(
     raylib
