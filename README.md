@@ -8,3 +8,5 @@
 - ocean simulation with fast fourier transform
   - https://www.youtube.com/watch?v=kGEqaX4Y4bQ
   - https://www.youtube.com/watch?v=yPfagLeUa7k
+- procedural terrain
+  - https://www.youtube.com/watch?v=J1OdPrO7GD0
