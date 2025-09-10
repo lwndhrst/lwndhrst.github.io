@@ -10,3 +10,5 @@
   - https://www.youtube.com/watch?v=yPfagLeUa7k
 - procedural terrain
   - https://www.youtube.com/watch?v=J1OdPrO7GD0
+- aircraft physics
+  - https://www.youtube.com/watch?v=p3jDJ9FtTyM 
